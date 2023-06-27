@@ -1,3 +1,10 @@
 pandas
+numpy
 fastapi
 uvicorn
+matplotlib
+seaborn
+scikit-learn
+json
+re
+nltk

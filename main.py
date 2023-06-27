@@ -1,6 +1,14 @@
 import pandas as pd
 from fastapi import FastAPI
 from fastapi.responses import JSONResponse
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+import json
+import re
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
 
 app = FastAPI()
 
@@ -124,6 +132,67 @@ def get_director(nombre_director_o_directora):
     
     return JSONResponse(content={"retorno_total": return_total, "peliculas": movies_info})
 
+columnas_modelo = ['title', 'overview']
+df_modelo = df_movies_limpio[columnas_modelo].dropna()
 
+# Instancio TfidfVectorizer
+tfidf_vectorizer = TfidfVectorizer(stop_words='english')
 
+# Creo la matriz
+tfidf_matrix = tfidf_vectorizer.fit_transform(df_modelo['overview'])
 
+# Creo una función para preprocesar el texto de la columna 'overview'
+def preprocess_text(text):
+    # Elimino caracteres especiales y números
+    text = re.sub(r'[^a-zA-Z]', ' ', text)
+    
+    # Convierto el texto a minúsculas
+    text = text.lower()
+    
+    # Tokenización de palabras
+    tokens = word_tokenize(text)
+    
+    # Elimino palabras vacías
+    stop_words = set(stopwords.words('english'))
+    tokens = [word for word in tokens if word not in stop_words]
+    
+    # Uno las palabras preprocesadas en una cadena de texto
+    processed_text = ' '.join(tokens)
+    
+    return processed_text
+
+# Aplico la función en la columna
+df_modelo['overview'] = df_modelo['overview'].apply(preprocess_text)
+
+# Vectorizo
+vectorizer = TfidfVectorizer()
+tfidf_matrix = vectorizer.fit_transform(df_modelo['overview'])
+
+# Cálculo de similitud del coseno
+cosine_similarities = cosine_similarity(tfidf_matrix, tfidf_matrix)
+
+@app.get("/recomendacion/{titulo}")
+def recomendacion(titulo):
+    # Obtener el índice de la película correspondiente al título
+    indices = pd.Series(df_modelo.index, index=df_modelo['title']).drop_duplicates()
+    if titulo not in indices:
+        return {'error': f'No se encontró la película con el título "{titulo}" en nuestra base de datos.'}
+
+    idx = indices[titulo]
+
+    try:
+        # Obtener los puntajes de similitud de la película con todas las demás
+        similarity_scores = list(enumerate(cosine_similarities[idx]))
+
+        # Ordenar las películas según los puntajes de similitud en orden descendente
+        similarity_scores = sorted(similarity_scores, key=lambda x: x[1], reverse=True)
+    except ValueError:
+        return {'error': f'No se encontró la película con el título "{titulo}" en nuestra base de datos.'}
+
+    # Obtener los índices de las películas recomendadas
+    recommended_indices = [i[0] for i in similarity_scores[1:6]]  # Se obtienen las primeras 5 películas recomendadas
+
+    # Devolver los títulos de las películas recomendadas en orden decreciente
+    recomendaciones = df_modelo['title'].iloc[recommended_indices[::-1]].tolist()  # Se invierte el orden de la lista y se convierte a una lista
+    
+    return {'recomendaciones': recomendaciones}
