@@ -9,6 +9,7 @@ import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 nltk.download('punkt')
+nltk.download('stopwords')
 import re
 
 app = FastAPI()
