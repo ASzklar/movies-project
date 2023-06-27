@@ -134,8 +134,10 @@ def get_director(nombre_director_o_directora):
     
     return JSONResponse(content={"retorno_total": return_total, "peliculas": movies_info})
 
+df_acotado = df_movies_limpio.head(1000)
+
 columnas_modelo = ['title', 'overview']
-df_modelo = df_movies_limpio[columnas_modelo].dropna()
+df_modelo = df_acotado[columnas_modelo].dropna()
 
 # Instancio TfidfVectorizer
 tfidf_vectorizer = TfidfVectorizer(stop_words='english')
