@@ -5,8 +5,6 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
-import json
-import re
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 
@@ -195,4 +193,4 @@ def recomendacion(titulo):
     # Devolver los títulos de las películas recomendadas en orden decreciente
     recomendaciones = df_modelo['title'].iloc[recommended_indices[::-1]].tolist()  # Se invierte el orden de la lista y se convierte a una lista
     
-    return {'recomendaciones': recomendaciones}
+    return JSONResponse(content={"recomendaciones": recomendaciones})

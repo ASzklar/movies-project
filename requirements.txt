@@ -5,6 +5,4 @@ uvicorn
 matplotlib
 seaborn
 scikit-learn
-json
-re
 nltk
