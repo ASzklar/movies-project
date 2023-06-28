@@ -180,7 +180,7 @@ def recomendacion(titulo):
     # Obtener el índice de la película correspondiente al título
     indices = pd.Series(df_modelo.index, index=df_modelo['title']).drop_duplicates()
     if titulo not in indices:
-        return {'error': f'No se encontró la película con el título "{titulo}" en nuestra base de datos.'}
+        return JSONResponse(content={"mensaje": f"El título {titulo} no fue encontrado en nuestra base de datos. Asegúrese de estar escribiéndolo correctamente."})
 
     idx = indices[titulo]
 
@@ -191,7 +191,7 @@ def recomendacion(titulo):
         # Ordenar las películas según los puntajes de similitud en orden descendente
         similarity_scores = sorted(similarity_scores, key=lambda x: x[1], reverse=True)
     except ValueError:
-        return {'error': f'No se encontró la película con el título "{titulo}" en nuestra base de datos.'}
+        return JSONResponse(content={"mensaje": f"El título {titulo} no fue encontrado en nuestra base de datos. Asegúrese de estar escribiéndolo correctamente."})
 
     # Obtener los índices de las películas recomendadas
     recommended_indices = [i[0] for i in similarity_scores[1:6]]  # Se obtienen las primeras 5 películas recomendadas
