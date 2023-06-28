@@ -136,8 +136,10 @@ def get_director(nombre_director_o_directora):
 
 df_acotado = df_movies_limpio.head(4500)
 
-columnas_modelo = ['title', 'overview']
+columnas_modelo = ['title', 'overview', 'genres_name']
 df_modelo = df_acotado[columnas_modelo].dropna()
+
+df_modelo['overview'] = df_modelo[['overview', 'genres_name']].apply(' '.join, axis=1)
 
 # Instancio TfidfVectorizer
 tfidf_vectorizer = TfidfVectorizer(stop_words='english')
