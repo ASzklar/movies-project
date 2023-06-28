@@ -1,8 +1,6 @@
 import pandas as pd
 from fastapi import FastAPI
-from fastapi.responses import JSONResponse
-import matplotlib.pyplot as plt
-import seaborn as sns
+from fastapi.responses import JSONResponse #Para poder darle formato json a los retornos de las funciones
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import nltk
@@ -12,6 +10,7 @@ nltk.download('punkt')
 nltk.download('stopwords')
 import re
 
+# Instancio y luego creo las funciones
 app = FastAPI()
 
 df_movies_limpio = pd.read_csv("movies_dataset_limpio.csv")
@@ -134,12 +133,10 @@ def get_director(nombre_director_o_directora):
     
     return JSONResponse(content={"retorno_total": return_total, "peliculas": movies_info})
 
-df_acotado = df_movies_limpio.head(4500)
+df_acotado = df_movies_limpio.head(4500) # Tuve que achicar el df por límites de memoria de la página Render
 
-columnas_modelo = ['title', 'overview', 'genres_name']
+columnas_modelo = ['title', 'overview']
 df_modelo = df_acotado[columnas_modelo].dropna()
-
-df_modelo['overview'] = df_modelo[['overview', 'genres_name']].apply(' '.join, axis=1)
 
 # Instancio TfidfVectorizer
 tfidf_vectorizer = TfidfVectorizer(stop_words='english')
