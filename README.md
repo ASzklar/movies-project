@@ -16,7 +16,7 @@ Luego debíamos generar una api utilizando la librería fastAPI creando varias f
 
 *-def get_actor( nombre_actor )*: Devuelve el éxito del actor o la actriz solicitado/a medido a través del retorno(facturación sobre presupuesto). Además, la cantidad de películas que en las que ha participado y el promedio de retorno.
 
-*-def get_director( nombre_director *): Devuelve el éxito del director o la directora solicitado/a medido a través del retorno y el nombre de cada película con la fecha de lanzamiento, retorno individual, costo y ganancia de la misma.
+*-def get_director( nombre_director )*: Devuelve el éxito del director o la directora solicitado/a medido a través del retorno y el nombre de cada película con la fecha de lanzamiento, retorno individual, costo y ganancia de la misma.
 
 Luego de crear esas funciones venía otra parte complicada (debo reconocer que en estos procesos de aprendizaje las partes complicadas son las que más nos hacen sufrir en el momento pero al mismo tiempo las que nos hacen aprender a la fuerza y nos dejan grandes enseñanzas): Debíamos hacer el deployment a través de la página render.com.
 
@@ -46,5 +46,5 @@ Funciones de consulta:
 
 Creo que esto es lo más importante como para entender lo que hice pero por cualquier duda, consulta, sugerencia, reclamo, etc. dejo mis mails:
 
-szklaradrian@gmail.com
+szklaradrian@gmail.com  
 szklaradriandatos@gmail.com
