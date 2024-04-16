@@ -1,4 +1,4 @@
-### **Movies**
+### 🎞️**Movies**🎞️
 
 Este es el primer proyecto individual de labs (siguiente etapa luego de finalizar el bootcamp) de la carrera data science en Soy Henry. Soy estudiante de la cohorte DSPT01, o sea la primera en modalidad part time.
 
@@ -44,7 +44,8 @@ Funciones de consulta:
 /recomendacion/{Nombre de una película}
 
 
-Creo que esto es lo más importante como para entender lo que hice pero por cualquier duda, consulta, sugerencia, reclamo, etc. dejo mis mails:
+Creo que esto es lo más importante como para entender lo que hice pero por cualquier duda, consulta, sugerencia, reclamo, etc. dejo mis mails y mi perfil de Linkedin:
 
 szklaradrian@gmail.com  
 szklaradriandatos@gmail.com
+[LinkedIn](www.linkedin.com/in/adrian-szklar)
