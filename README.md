@@ -25,8 +25,8 @@ Superados los obstáculos y con el bendito link de render funcionando correctame
 Finalmente decidí que mi sistema de recomendación se basara en la columna Overview, cuyos valores eran cadenas de texto con pequeños resúmenes de las películas, sobre la que apliqué cosine_similarity (método para calcular la similitud entre vectores). Por supuesto que antes de hacerlo de esta forma tuve muchos otros intentos e ideas pero en algunos casos el tamaño del dataset (45000 registros aproximadamente) imposibilitaba ciertos métodos y en otros el obstáculo era el límite de memoria de render.com. Incluso finalmente para que la función de recomendación no colapse el render tuve que achicar el dataset a sólo los primeros 4500 registros.
 
 Debido al límite de GitHub para el tamaño de los archívos en los repositorios, sólo subí los datasets limpios. Así que dejo aquí los links a los archivos originales por si alguien quiere acceder a ellos:  
-[Archivo movies.csv](https://drive.google.com/file/d/1NsemqaN83nSCiXJAK-Zpg-yb2iC0NMgu/view?usp=sharing)  
-[Archivo credits.csv](https://drive.google.com/file/d/1ILLlv0zh9o32_bQTaGeRSVj5rpf1yzs6/view?usp=sharing)
+- [Archivo movies.csv](https://drive.google.com/file/d/1NsemqaN83nSCiXJAK-Zpg-yb2iC0NMgu/view?usp=sharing)  
+- [Archivo credits.csv](https://drive.google.com/file/d/1ILLlv0zh9o32_bQTaGeRSVj5rpf1yzs6/view?usp=sharing)
 
 **Link al video en Youtube mostrando el correcto funcionamiento de la API:**
 https://www.youtube.com/watch?v=auPKicg8sS0
