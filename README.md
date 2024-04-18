@@ -46,6 +46,6 @@ Funciones de consulta:
 
 Creo que esto es lo más importante como para entender lo que hice pero por cualquier duda, consulta, sugerencia, reclamo, etc. dejo mis mails y mi perfil de Linkedin:
 
-szklaradrian@gmail.com  
-szklaradriandatos@gmail.com  
-[LinkedIn](www.linkedin.com/in/adrian-szklar)
+- szklaradrian@gmail.com
+- szklaradriandatos@gmail.com
+- [LinkedIn](www.linkedin.com/in/adrian-szklar)
