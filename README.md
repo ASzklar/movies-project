@@ -1,4 +1,4 @@
-### **Movies**
+### 🎞️**Movies**🎞️
 
 Este es el primer proyecto individual de labs (siguiente etapa luego de finalizar el bootcamp) de la carrera data science en Soy Henry. Soy estudiante de la cohorte DSPT01, o sea la primera en modalidad part time.
 
@@ -24,9 +24,9 @@ Superados los obstáculos y con el bendito link de render funcionando correctame
 
 Finalmente decidí que mi sistema de recomendación se basara en la columna Overview, cuyos valores eran cadenas de texto con pequeños resúmenes de las películas, sobre la que apliqué cosine_similarity (método para calcular la similitud entre vectores). Por supuesto que antes de hacerlo de esta forma tuve muchos otros intentos e ideas pero en algunos casos el tamaño del dataset (45000 registros aproximadamente) imposibilitaba ciertos métodos y en otros el obstáculo era el límite de memoria de render.com. Incluso finalmente para que la función de recomendación no colapse el render tuve que achicar el dataset a sólo los primeros 4500 registros.
 
-Debido al límite de GitHub para el tamaño de los archívos en los repositorios, sólo subí los datasets limpios. Así que dejo aquí los links a los archivos originales por si alguien quiere acceder a ellos:
-https://drive.google.com/file/d/1NsemqaN83nSCiXJAK-Zpg-yb2iC0NMgu/view?usp=sharing (movies.csv)
-https://drive.google.com/file/d/1ILLlv0zh9o32_bQTaGeRSVj5rpf1yzs6/view?usp=sharing (credits.csv)
+Debido al límite de GitHub para el tamaño de los archívos en los repositorios, sólo subí los datasets limpios. Así que dejo aquí los links a los archivos originales por si alguien quiere acceder a ellos:  
+- [Archivo movies.csv](https://drive.google.com/file/d/1NsemqaN83nSCiXJAK-Zpg-yb2iC0NMgu/view?usp=sharing)  
+- [Archivo credits.csv](https://drive.google.com/file/d/1ILLlv0zh9o32_bQTaGeRSVj5rpf1yzs6/view?usp=sharing)
 
 **Link al video en Youtube mostrando el correcto funcionamiento de la API:**
 https://www.youtube.com/watch?v=auPKicg8sS0
@@ -44,7 +44,8 @@ Funciones de consulta:
 /recomendacion/{Nombre de una película}
 
 
-Creo que esto es lo más importante como para entender lo que hice pero por cualquier duda, consulta, sugerencia, reclamo, etc. dejo mis mails:
+Creo que esto es lo más importante como para entender lo que hice pero por cualquier duda, consulta, sugerencia, reclamo, etc. dejo mis mails y mi perfil de Linkedin:
 
-szklaradrian@gmail.com  
-szklaradriandatos@gmail.com
+- szklaradrian@gmail.com
+- szklaradriandatos@gmail.com
+- [LinkedIn](www.linkedin.com/in/adrian-szklar)
