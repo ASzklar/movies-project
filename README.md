@@ -48,4 +48,4 @@ Creo que esto es lo más importante como para entender lo que hice pero por cual
 
 - szklaradrian@gmail.com
 - szklaradriandatos@gmail.com
-- [LinkedIn](www.linkedin.com/in/adrian-szklar)
+- [LinkedIn](https://www.linkedin.com/in/adrian-szklar/)
