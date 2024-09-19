@@ -34,13 +34,14 @@ https://www.youtube.com/watch?v=auPKicg8sS0
 **Link para hacer consultas a la API:**
 https://proyecto-movies-w8zf.onrender.com
 
-Funciones de consulta:
-/cantidad_filmaciones_mes/{mes}
-/cantidad_filmaciones_dia/{dia de la semana}
-/score_title/{Nombre de una película}
-/votos_titulo/{Nombre de una película}
-/get_actor/{nombre actor o actriz}
-/get_director/{nombre director o directora}
+Funciones de consulta:  
+  
+/cantidad_filmaciones_mes/{mes}  
+/cantidad_filmaciones_dia/{dia de la semana}  
+/score_title/{Nombre de una película}  
+/votos_titulo/{Nombre de una película}  
+/get_actor/{nombre actor o actriz}  
+/get_director/{nombre director o directora}  
 /recomendacion/{Nombre de una película}
 
 
