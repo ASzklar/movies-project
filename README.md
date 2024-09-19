@@ -36,13 +36,13 @@ https://proyecto-movies-w8zf.onrender.com
 
 Funciones de consulta:  
   
-/cantidad_filmaciones_mes/{mes}  
+*/cantidad_filmaciones_mes/{mes}  
 /cantidad_filmaciones_dia/{dia de la semana}  
 /score_title/{Nombre de una película}  
 /votos_titulo/{Nombre de una película}  
 /get_actor/{nombre actor o actriz}  
 /get_director/{nombre director o directora}  
-/recomendacion/{Nombre de una película}
+/recomendacion/{Nombre de una película}*
 
 
 Creo que esto es lo más importante como para entender lo que hice pero por cualquier duda, consulta, sugerencia, reclamo, etc. dejo mis mails y mi perfil de Linkedin:
