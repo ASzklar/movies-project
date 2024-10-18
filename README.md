@@ -2,7 +2,7 @@
 
 Este es el primer proyecto individual de labs (siguiente etapa luego de finalizar el bootcamp) de la carrera data science en Soy Henry. Soy estudiante de la cohorte DSPT01, o sea la primera en modalidad part time.  
   
-Para este proyecto nos entregaban unos dataset con data sobre películas (año de lanzamiento, duración, productoras, género, popularidad, etc.) y en una primera etapa debíamos realizar el ETL (extracción, transformación y carga) para dejar la data limpia y preparada, lista como para la etapa siguiente. Lo más complicado fue desanidar algunas columnas cuyos valores eran diccionarios o incluso listas de diccionarios. Luego de infinitos intentos fue el método ast.literal_eval el gran salvador.  
+Para este proyecto nos entregaban unos datasets con data sobre películas (año de lanzamiento, duración, productoras, género, popularidad, etc.) y en una primera etapa debíamos realizar el ETL (extracción, transformación y carga) para dejar la data limpia y preparada, lista como para la etapa siguiente. Lo más complicado fue desanidar algunas columnas cuyos valores eran diccionarios o incluso listas de diccionarios. Luego de infinitos intentos fue el método ast.literal_eval el gran salvador.  
 
 Luego debíamos generar una api utilizando la librería fastAPI creando varias funciones específicas con la info de la data limpia. Las mismas son:
 
